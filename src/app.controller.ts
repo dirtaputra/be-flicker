@@ -9,4 +9,10 @@ export class AppController {
   getHello(): string {
     return this.appService.getHello();
   }
+
+  @Get('/getFeed')
+  @Header('content-type', 'application/json')
+  getFeed() {
+    return this.appService.getFeed();
+  }
 }
